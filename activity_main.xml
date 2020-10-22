@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paleBlue"
+    tools:context="com.example.dunnwill.tempconv.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/valueText"
+        android:layout_alignParentStart="true"
+        android:text="@string/enter_a_temperature_value"
+        android:textColor="@color/maroonColor" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/temperature_gauge" />
+
+    <EditText
+        android:id="@+id/valueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="14dp"
+        android:background="@color/paleYellow"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/celciusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/valueText"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/valueText"
+        android:layout_marginTop="25dp"
+        android:background="@color/paleYellow"
+        android:onClick="convertToCelsius"
+        android:text="@string/convert_to_celsius" />
+
+    <Button
+        android:id="@+id/fahrenheitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/celciusButton"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/celciusButton"
+        android:layout_marginTop="16dp"
+        android:background="@color/paleYellow"
+        android:onClick="convertToFahrenheit"
+        android:text="@string/convert_to_fahrenheit" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fahrenheitButton"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fahrenheitButton"
+        android:layout_marginTop="27dp" />
+
+</android.widget.RelativeLayout>
+
